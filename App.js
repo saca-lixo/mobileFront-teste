@@ -1,29 +1,15 @@
-import 'react-native-gesture-handler';
-import { React  } from 'react';
-import { createStackNavigator } from '@react-navigation/native-';
-import { NavigationContainer } from '@react-navigation/native';
-import Login from './screens/Login';
-import Principal from './screens/Principal';
+import React from 'react';
+import { StatusBar} from 'react-native';
 
-
-
-
-const Stack = createStackNavigator();
-
-function MyStack() {
-  
-}
+import { NavigationContainer} from '@react-navigation/native'
+import Rotas from './src/rotas'
 
 export default function App() {
   return (
     <NavigationContainer>
-       <Stack.Navigator>
-      <Stack.Screen name = "Login" component={Login} />
-      <Stack.Screen name = "Principal" component={Principal} />
-      
-    </Stack.Navigator>
-  
-    </NavigationContainer>
-  );
+      <StatusBar backgroundColor="#fff" barStyle = 'light-content'/>
+      <Rotas/>
+    </NavigationContainer> 
+     );
 }
 
